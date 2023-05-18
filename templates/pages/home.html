@@ -4,7 +4,11 @@
 
 
 {% block content %}
-<h1>Welcome Strangers</h1>
+{% if user.is_authenticated %}
+    <h3>Hello, {{ user.username }}</h3>
+    {% else %}
+    <h1>Welcome Strangers</h1>
+    {% endif %}
 <p>This Zoo hold the most exciting creatures</p>
 <h3>Daily Times says!:</h3>
 <p>"The popularity of the Martin's potato roll is kind of fascinating," says Fidanza. "It turns into a mushy, soggy thing so quickly but it's so delicious that you kinda don't care." However, "a dry sandwich is the worst sandwich. If a sandwich can avoid being dry, that's step one." The crucial factor, she says, is condiments. Not only do they protect your sandwich from dryness, they make it taste a heck of a lot better, too. "A good sandwich comes down to the condiments," Fidanza says. "You can use anything—turkey, tuna, vegetables, a hard-boiled egg—as the base of a sandwich. But having good condiments to make them taste better is key, whether that's mayonnaise, mustard, or some kind of relish. It needs those elements to elevate the base."</p>
